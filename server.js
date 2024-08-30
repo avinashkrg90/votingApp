@@ -10,6 +10,10 @@ app.get('/', (req, res)=>{
     res.render("index", {text: "world"})
 })
 
+app.get('/users', (req, res)=>{
+    res.send("Users List")
+})
+
 app.listen(PORT, ()=>{
     console.log(`server listening on port ${PORT}`)
 })
