@@ -2,10 +2,12 @@ const express = require('express')
 
 const app = express()
 
+app.set('view engine', 'ejs')
+
 const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res)=>{
-    res.send("Hi, welcome to my server!!")
+    res.render("index")
 })
 
 app.listen(PORT, ()=>{
